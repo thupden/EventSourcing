@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  post.cmd.api:
+    image: ${DOCKER_REGISTRY-}postcmdapi
+    build:
+      context: .
+      dockerfile: SM-Post/Post.Cmd/Post.Cmd.Api/Dockerfile
+   
+  zookeeper:
+    image: docker.io/bitnami/zookeeper:3.9
+
+  kafka:
+    image: docker.io/bitnami/kafka:3.5
+  
+  sql-container:
+    image: mcr.microsoft.com/mssql/server
+
+  mongo-container:
+    image: mongo
+
+volumes:
+  zookeeper_data:
+    driver: local
+  kafka_data:
+    driver: local

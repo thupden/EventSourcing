@@ -1,0 +1,16 @@
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\Post.Cmd.Api.deps.json
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\Post.Cmd.Api.runtimeconfig.json
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\appsettings.Development.json
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\appsettings.json
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\Post.Cmd.Api.exe
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\Post.Cmd.Api.dll
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\Microsoft.OpenApi.dll
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\Post.Cmd.Api.pdb
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\CQRS.Core.dll
+C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo\bin\Debug\CQRS.Core.pdb

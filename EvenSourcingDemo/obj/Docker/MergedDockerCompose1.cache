@@ -1,0 +1,86 @@
+name: dockercompose7328811441539662787
+services:
+  kafka:
+    container_name: kafka
+    depends_on:
+      zookeeper:
+        condition: service_started
+        required: true
+    environment:
+      ALLOW_PLAINTEXT_LISTENER: "yes"
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_CFG_LISTENERS: PLAINTEXT://:9092
+      KAFKA_CFG_ZOOKEEPER_CONNECT: zookeeper:2181
+    image: docker.io/bitnami/kafka:3.5
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 9092
+        published: "9092"
+        protocol: tcp
+    restart: always
+    volumes:
+      - type: volume
+        source: kafka_data
+        target: /bitnami
+        volume: {}
+  post.cmd.api:
+    build:
+      context: C:\Users\ADMIN\OneDrive\Desktop\microservicesDemo\EventSourcing\EvenSourcingDemo
+      dockerfile: SM-Post/Post.Cmd/Post.Cmd.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+    image: postcmdapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\ADMIN\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\ADMIN\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  zookeeper:
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+    image: docker.io/bitnami/zookeeper:3.9
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 2181
+        published: "2181"
+        protocol: tcp
+    restart: always
+    volumes:
+      - type: volume
+        source: zookeeper_data
+        target: /bitnami
+        volume: {}
+networks:
+  default:
+    name: dockercompose7328811441539662787_default
+volumes:
+  kafka_data:
+    name: dockercompose7328811441539662787_kafka_data
+    driver: local
+  zookeeper_data:
+    name: dockercompose7328811441539662787_zookeeper_data
+    driver: local
